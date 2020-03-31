@@ -1,0 +1,9 @@
+monolog:
+
+  handlers:
+
+    milliner:
+      type: rotating_file
+      path: /var/log/islandora/milliner.log
+      level: $MILLINER_LOG_LEVEL
+      max_files: 1
