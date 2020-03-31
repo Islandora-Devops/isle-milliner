@@ -1,0 +1,42 @@
+---
+
+fedora_resource:
+  base_url: http://fcrepo:8080/fcrepo/rest
+
+# Missing from https://raw.githubusercontent.com/Islandora/Crayfish/dev/Milliner/cfg/config.example.yaml
+# # if drupal_base_url contains a path, be sure to include trailing slash
+# or relative paths will not resolve correctly.
+
+# (in Nia's version 8000 is used, in MVP2a/3 80 is used)
+# drupal_base_url: http://apache:80
+# gemini_base_url: http://apache:8000/gemini
+
+# modified_date_predicate: http://schema.org/dateModified
+
+# strip_format_jsonld: true 
+
+# debug: false 
+
+
+log:
+  # Valid log levels are:
+  # DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY, NONE
+  # log level none won't open logfile
+  level: $milliner_LOG_LEVEL
+  file: /var/log/islandora/milliner.log
+
+syn:
+  # toggles JWT security for service
+  enable: true
+  # Path to the syn config file for authentication.
+  # example can be found here:
+  # https://github.com/Islandora/Syn/blob/master/conf/syn-settings.example.xml
+  config: ../syn-settings.xml
+
+db.options:
+  driver: pdo_mysql
+  host: mariadb
+  port: 3306
+  dbname: gemini
+  user: gemini
+  password: gemini
