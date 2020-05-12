@@ -1,0 +1,12 @@
+[template]
+src = "config.yaml.tpl"
+dest = "/opt/crayfish/Milliner/cfg/config.yaml"
+mode = "0644"
+keys = [
+    "/milliner/fedora/base/url"
+    "/milliner/drupal/base/url"
+    "/milliner/gemini/base/url"
+    "/milliner/modified/date/predicate"
+    "/milliner/debug"
+    "/milliner/log/level",
+]
